@@ -3,9 +3,9 @@
 # Created by: dean.wright
 # Created on: 25/10/2017
 import asyncio
+import datetime
 import threading
 import time
-import datetime
 
 
 class Patient(object):
@@ -70,13 +70,14 @@ class MedicationManager(object):
         #get the notification alarm notification queue ready
         self.alarms = asyncio.Queue()
 
-        self.setup_alarms(self)
+        self.setup_alarms()
         #notification manager takes care of intereactions with the patient once the dosage due alarm has been raised
         self.notification_manager = NotificationManager()
 
         #load any existing patients
 
     def setup_alarms(self):
+        # todo implement check for any saved patients and load an alarm for their medications
         self.alarms
         pass
 
@@ -90,4 +91,5 @@ class MedicationManager(object):
 
 
 class NotificationManager(object):
-    pass
+    def __init__(self):
+        print("Time to take our medicine: ")

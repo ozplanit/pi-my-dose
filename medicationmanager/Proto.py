@@ -34,3 +34,8 @@ person1.medications.append(med)
 person1.medications.append(med2)
 
 
+# start Medication manager
+
+# Start Notifcation manager
+
+# start UI
